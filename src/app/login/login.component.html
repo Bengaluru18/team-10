@@ -1,0 +1,17 @@
+<mat-card>
+  <form (submit)="onLogin()" #postForm="ngForm">
+      <mat-form-field>
+              <p>Email ID:</p>
+              <textarea matInput type="text" name="email" ngModel></textarea>
+              </mat-form-field>
+              <mat-form-field>
+                  <P>Password:</P>
+                      <input matInput type="password" name="password" ngModel>
+                      </mat-form-field>
+              <button 
+              mat-raised-button
+              color="primary" 
+              type="submit">Login</button>
+          </form>
+</mat-card>
+<hr>

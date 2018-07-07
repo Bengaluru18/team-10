@@ -35,6 +35,8 @@ export class AuthService {
       .catch(err => {
         console.log('Something went wrong:',err.message);
       });
+
+      //this.firebaseAuth.auth.currentUser.ui
   }
 
   logout() {

@@ -1,0 +1,11 @@
+<form #Form="ngForm" name="form" class="ui form">
+  <div class="field">
+    <label>Beneficiary (Patient) ID</label>
+    <input type="text" name="patientname" placeholder="Patient ID" [(ngModel)]="patientname">
+  </div>
+  <div class="field">
+    <label>Department</label>
+    <input type="text" name="department" placeholder="Department" [(ngModel)]="department">
+  </div>
+  <button class="ui button" type="submit" (click)="makeAppReceptionist()">Request</button>
+</form>

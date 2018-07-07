@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegisterPatientComponent } from './register-patient/register-patient.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisteremployeeComponent } from './registeremployee/registeremployee.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'register', component:RegisterPatientComponent
   },
   {
-    path: 'dashboard', component: DashboardComponent
+    path: 'assign', component:RegisteremployeeComponent
   }
 ];
 

@@ -17,18 +17,25 @@ import { MatInputModule} from '@angular/material';
 // import { MatFormFieldModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisteremployeeComponent } from './registeremployee/registeremployee.component';
+// import { MakeAppointmentComponent } from './make-appointment/make-appointment.component';
+import { MakeAppointmentReceptionistComponent } from './make-appointment-receptionist/make-appointment-receptionist.component';
 // // import { AppComponent } from './app.component';
 // import { PostCreateComponent } from './posts/post-create/post-create.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 // import { HeaderComponent } from './header/header.component';
 // import { PostListComponent } from './post-list/post-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterPatientComponent,
-    RegisteremployeeComponent
+    RegisteremployeeComponent,
+    DashboardComponent,
+
+    // MakeAppointmentComponent,
+    MakeAppointmentReceptionistComponent
   ],
   imports: [
    BrowserModule,

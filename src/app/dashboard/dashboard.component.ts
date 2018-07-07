@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { temp } from '../models/temp';
+import { appointment } from '../models/temp';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     // this.another = this.db.collection<temp>('temp').valueChanges();
-    this.db.collection<temp>('temp').valueChanges().subscribe(docs => {
+    this.db.collection<appointment>('Appointment').valueChanges().subscribe(docs => {
       this.myArray = [];
       docs.forEach(doc => {
         this.myArray.push(doc);
@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
 
   onclick()
   {
-    this.db.collection<temp>('temp').valueChanges().subscribe(docs => {
+    this.db.collection<appointment>('temp').valueChanges().subscribe(docs => {
       this.myArray = [];
       docs.forEach(doc => {
         this.myArray.push(doc);

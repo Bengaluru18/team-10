@@ -2,8 +2,11 @@
   dashboard works!
 </p>
 
-<li *ngFor="let item of myArray">
-    <!-- <script> console.log(item);</script> -->
-    <!-- <script>console.log({{item['tempname']}});</script> -->
-    {{item.tempname}}
-    </li>
+<ul *ngFor="let item of myArray">
+
+  <li>
+    {{item.beneficiary}} ---> {{item.doctor}} ---> {{item.time}}
+  </li>
+
+
+</ul>

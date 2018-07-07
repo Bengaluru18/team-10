@@ -1,12 +1,36 @@
-<p>
+<!-- <p>
   dashboard works!
-</p>
-
-<ul *ngFor="let item of myArray">
-
-  <li>
-    {{item.beneficiary}} ---> {{item.doctor}} ---> {{item.time}}
-  </li>
+</p> -->
 
 
-</ul>
+
+<!-- <mat-table #table [dataSource]="dataSource">
+  <ng-container matColumnDef="beneficiary">
+    <mat-header-cell *matHeaderCellDef> Patient Name </mat-header-cell>
+    <mat-cell *matCellDef="let appointment"> {{appointment.beneficiary}} </mat-cell>
+  </ng-container>   
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+  <mat-row *matRowDef="let myRowData; columns: displayedColumns"></mat-row>
+
+</mat-table> -->
+
+
+<div style="margin: 2%;">
+  <div class="ui cards" *ngFor="let appointment of myArray">
+
+    <div class="card">
+      <div class="content">
+        <div class="header"> {{appointment.time.toDate() | date : 'medium'}} </div>
+        <div class="description">
+          {{appointment.beneficiary}}
+        </div>
+      </div>
+      <div class="ui bottom attached button">
+        <i class="add icon"></i>
+        Add Friend
+      </div>
+    </div>
+  </div>
+</div>

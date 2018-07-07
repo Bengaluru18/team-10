@@ -1,170 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta charset="utf-8">
+  <title>Ssk</title>
+  <base href="/">
 
-#myInput,#myInput1, #myInput2  {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
-
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<div align="center">
+
+	<div align="center">
 	<h1 >Spastics Society of Karnataka</h1>
 	<image  src="https://static.wixstatic.com/media/ffebe5_789df2f3bf0f4ef3afd73c67e85dba94~mv2.jpg/v1/crop/x_12,y_0,w_186,h_195/fill/w_89,h_94,al_c,q_80,usm_0.66_1.00_0.01/ffebe5_789df2f3bf0f4ef3afd73c67e85dba94~mv2.webp"></image>
 	</div>  
-<h2>Enter the Doctor ID</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by doctor  ID.." title="Type in a ID">
-<h2>Enter Patient ID</h2>
-<input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Search by patient id.." title="Type in a ID">
-<h2>Enter the Department</h2>
-<input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search by department.." title="Type in a department">
-
-<table id="myTable">
-  <tr class="header">
-    <th style="width:60%;">DoctorID</th>
-    <th style="width:40%;">DoctorName</th>
-	<th style="width:40%;">PatientID</th>
-	<th style="width:40%;">Department</th>
-	
-  </tr>
-  <tr>
-    <td>123</td>
-    <td>dia</td>
-	<td>A123</td>
-	<td>Ortho</td>
-  </tr>
-  <tr>
-    <td>111</td>
-    <td>keerthi</td>
-	<td>A123</td>
-	<td>pediatrisian</td>
-  </tr>
-  <tr>
-    <td>568</td>
-    <td>manol</td>
-	<td>A123</td>
-	<td>Ortho</td>
-  </tr>
-  <tr>
-    <td>696</td>
-    <td>avi</td>
-	<td>A123</td>
-	<td>Ortho</td>
-  </tr>
-  <tr>
-    <td>123</td>
-    <td>dia</td>
-	<td>A155</td>
-	<td>Ortho</td>
-  </tr>
-  <tr>
-    <td>111</td>
-    <td>keerthi</td>
-	<td>A125</td>
-	<td>pediatrisian</td>
-  </tr>
-  <tr>
-    <td>222</td>
-    <td>adi</td>
-	<td>A123</td>
-	<td>pediatrisian</td>
-  </tr>
-  <tr>
-    <td>353</td>
-    <td>hgt</td>
-	<td>A123</td>
-	<td>pediatrisian</td>
-  </tr>
-</table>
-
-<script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-
-function myFunction1() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput1");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-
-function myFunction2() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput2");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[3];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
-
+  <app-root></app-root>
 </body>
 </html>

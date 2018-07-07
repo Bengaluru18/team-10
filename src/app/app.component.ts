@@ -12,19 +12,19 @@ export class AppComponent {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService) {}
+  constructor() {}
 
-  signup() {
-    this.authService.signup(this.email, this.password);
-    this.email = this.password = '';
-  }
+  // signup() {
+  //   this.authService.signup(this.email, this.password);
+  //   this.email = this.password = '';
+  // }
 
-  login() {
-    this.authService.login(this.email, this.password);
-    this.email = this.password = '';    
-  }
+  // login() {
+  //   this.authService.login(this.email, this.password);
+  //   this.email = this.password = '';    
+  // }
 
-  logout() {
-    this.authService.logout();
-  }
+  // logout() {
+  //   this.authService.logout();
+  // }
 }

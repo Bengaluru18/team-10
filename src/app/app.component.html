@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!--<div style="text-align:center">
+<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -22,7 +22,7 @@
 
 </router-outlet>
 -->
-<mat-card>
+<!-- <mat-card>
 <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
 
 <div *ngIf="!(authService.user | async)">
@@ -31,16 +31,17 @@
   <button mat-raised-button
   color="blue" (click)="login()" [disabled]="!email || !password">
     Login
-  </button>
+  </button> -->
   <!--<button (click)="signup()" [disabled]="!email || !password">
     Signup
-  </button>-->
+  </button>
 
   
-</div>
+<!- </div>
 
 <button mat-raised-button
 color="blue" (click)="logout()" *ngIf="authService.user | async">
   Logout
 </button>
-</mat-card>
+</mat-card> -->
+<!-- <h1>hello</h1> -->

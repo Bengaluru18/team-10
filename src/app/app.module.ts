@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
 import { MatFormFieldModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule } from '@angular/material'
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -16,6 +16,7 @@ import { RegisterPatientComponent } from './register-patient/register-patient.co
 import { MatInputModule} from '@angular/material';
 // import { MatFormFieldModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
 // // import { AppComponent } from './app.component';
 // import { PostCreateComponent } from './posts/post-create/post-create.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -28,8 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterPatientComponent
+    // LoginComponent,
+    RegisterPatientComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

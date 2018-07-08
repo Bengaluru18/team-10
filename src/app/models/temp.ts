@@ -3,7 +3,7 @@ import { Timestamp } from "rxjs";
 
 export interface appointment {
     beneficiary: String;
-    doctor: String
-    time: String;
+    doctor: String;
+    // time: String;
 
 }

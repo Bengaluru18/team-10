@@ -1,0 +1,38 @@
+<div style="margin: 5%;" flex-wrapper>
+  <h3> Here are the Pending Requested Appointments</h3>
+</div>
+<div style="margin: 5%">
+  <div class="ui cards" *ngFor="let appointment of myArray">
+    <div class="card">
+      <div class="content">
+        <!-- <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg"> -->
+        <div class="header">
+          {{appointment.beneficiary}}
+        </div>
+        <div class="description">
+          {{appointment.beneficiary}} has an appointment with {{appointment.department}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <div class="ui basic green button" (click)="approveAppointment(appointment)">Approve</div>
+          <div class="ui basic red button" (click)="approveAppointment(appointment)">Decline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Select an appointment
+  </div>
+  <form #Form="ngForm" name="form" class="ui form" style="margin: 1rem;">
+    <div class="field">
+      <label>Time</label>
+      <input type="text" name="time" placeholder="Time" [(ngModel)]="time">
+    </div>
+    <button class="ui button" type="submit" (click)="scheduleAppointment()">Schedule</button>
+  </form>
+</div>

@@ -13,6 +13,7 @@ import { MatSort} from  '@angular/material';
 export class DashboardComponent implements OnInit {
 
   myArray = [];
+  myArrayScheduled = [];
 
     another : any;
   dataSource : MatTableDataSource<any>;
@@ -23,14 +24,20 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     // this.another = this.db.collection<temp>('temp').valueChanges();
-    this.db.collection<appointment>('Appointment').valueChanges().subscribe(docs => {
+    this.db.collection<appointment>('Appointments').valueChanges().subscribe(docs => {
       this.myArray = [];
       this.dataSource = new MatTableDataSource(docs);
       docs.forEach(doc => {
         this.myArray.push(doc);
         console.log(doc)
       });
-      
+    })
+
+    this.db.collection('ScheduledAppointments').valueChanges().subscribe(sdocs => {
+      this.myArrayScheduled=[];
+      sdocs.forEach(sdoc => {
+        this.myArrayScheduled.push(sdoc);
+      })
     })
 
   }

@@ -26,10 +26,11 @@ export class MakeAppointmentReceptionistComponent implements OnInit {
 
     var details = {
       'beneficiary' :  this.patientname,
-      'department' : this.department
+      'department' : this.department,
+      'id': ""
     }
-
-    this.db.collection('Appointments').add(details).then(()=>{
+    details.id = this.db.createId();
+    this.db.collection('Appointments').doc(details.id).set(details).then(()=>{
       this.patientname = "";
       this.department = "";
 

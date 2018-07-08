@@ -1,11 +1,33 @@
-<div style="margin: 10%;" >
+<h2 style="margin:10%"> List of appointments pending confirmation </h2>
+<div style="margin: 10%;">
   <div class="ui cards" *ngFor="let appointment of myArray">
 
     <div class="card">
       <div class="content">
-        <div class="header"> {{appointment.time.toDate() | date : 'medium'}} </div>
+        <!-- <div class="header"> {{appointment.time.toDate() | date : 'medium'}} </div> -->
+        <div class="header"> Request for appointment for: </div>
         <div class="description">
-          {{appointment.beneficiary}}
+          {{appointment.beneficiary}}, with department {{appointment.department}}
+        </div>
+      </div>
+      <div class="ui bottom attached button">
+        <i class="play"></i>
+        More Info
+      </div>
+    </div>
+  </div>
+</div>
+<h2 style="margin:10%"> List of Confirmed Appointments </h2>
+<div style="margin: 10%;">
+  <div class="ui cards" *ngFor="let appointment of myArrayScheduled">
+
+    <div class="card">
+      <div class="content">
+        <!-- <div class="header"> {{appointment.time.toDate() | date : 'medium'}} </div> -->
+        <div class="header"> Appointment scheduled for: </div>
+        <div class="description">
+          <b>{{appointment.beneficiary}}</b>, with department <b>{{appointment.department}}</b> <br>
+          <b>Date and Time: </b>{{appointment.time}}
         </div>
       </div>
       <div class="ui bottom attached button">

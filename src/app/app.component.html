@@ -3,6 +3,7 @@
 
   <div class="header item">
     Spastics Society of Karnataka
+    This is a progressive web app.
   </div>
   <a class="item" href="/dashboard">
     Dashboard  
@@ -15,6 +16,18 @@
   </a>
   <a class ="item" href = "/acceptDeclineAppointment">Accept or Decline an Appointment Request</a>
 </div>
+
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div *ngIf="authService.user | async" class="container">
+        <a class="navbar-brand">Menu</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">register</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="request">request</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="assign">assign</a></li>
+        </ul>
+    </div>
+</nav>
+
 <router-outlet>
 
 </router-outlet>

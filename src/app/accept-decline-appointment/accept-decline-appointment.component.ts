@@ -49,7 +49,9 @@ export class AcceptDeclineAppointmentComponent implements OnInit {
       console.log("Error deleting");
     });
 
-    this.router.navigate(["acceptDeclineAppointment"]);
+    $('.ui.modal').modal('hide');
+    $.location.reload();
+    // this.router.navigate(["acceptDeclineAppointment"]);
   }
 
   declineAppointment(appt)
@@ -60,7 +62,6 @@ export class AcceptDeclineAppointmentComponent implements OnInit {
     }).catch(function(error){
       console.log("Error declining appointment");
     });
-
     this.router.navigate(["acceptDeclineAppointment"]);
   }  
 }

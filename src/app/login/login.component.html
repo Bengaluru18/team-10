@@ -11,10 +11,17 @@
       <!--<button (click)="signup()" [disabled]="!email || !password">
         Signup
       </button>-->
-    
-      
     </div>
-    
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div *ngIf="authService.user | async" class="container">
+        <a class="navbar-brand">Menu</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">register</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="request">request</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="assign">assign</a></li>
+        </ul>
+    </div>
+</nav>
     <button mat-raised-button
     color="blue" (click)="logout()" *ngIf="authService.user | async">
       Logout

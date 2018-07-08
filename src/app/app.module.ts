@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisteremployeeComponent } from './registeremployee/registeremployee.component';
 // import { MakeAppointmentComponent } from './make-appointment/make-appointment.component';
 import { MakeAppointmentReceptionistComponent } from './make-appointment-receptionist/make-appointment-receptionist.component';
+import { LoginComponent } from './login/login.component';
+//import { ServiceWorkerModule } from '@angular/service-worker';
 // // import { AppComponent } from './app.component';
 // import { PostCreateComponent } from './posts/post-create/post-create.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -35,7 +37,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     DashboardComponent,
 
     // MakeAppointmentComponent,
-    MakeAppointmentReceptionistComponent
+    MakeAppointmentReceptionistComponent,
+    LoginComponent
   ],
   imports: [
    BrowserModule,
@@ -53,6 +56,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     ReactiveFormsModule,
     MatFormFieldModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule,MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase)
+    //ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   // providers: [AngularFirestore],
   bootstrap: [AppComponent]

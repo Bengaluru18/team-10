@@ -28,6 +28,7 @@ import { LoginComponent } from './login/login.component';
 // import { PostListComponent } from './post-list/post-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/accept-decline-appointment.component';
+import { PatientViewComponent } from './patient-view/patient-view.component';
 
 
 @NgModule({
@@ -44,7 +45,9 @@ import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/
 
     AcceptDeclineAppointmentComponent,
 
-    LoginComponent
+    LoginComponent,
+
+    PatientViewComponent
   ],
   imports: [
    BrowserModule,

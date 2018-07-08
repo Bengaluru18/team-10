@@ -33,11 +33,12 @@ export class AcceptDeclineAppointmentComponent implements OnInit {
 
   }
 
-  approveAppointment(appt) {
+  acceptAppointment(appt) {
     // console.log(this.element.nativeElement.querySelector('#timeform').innerHTML());
     this.appointment = appt;
     $('.ui.modal').modal('show');
   }
+
   scheduleAppointment()
   {
     this.appointment.time = this.time;
@@ -51,4 +52,15 @@ export class AcceptDeclineAppointmentComponent implements OnInit {
     this.router.navigate(["acceptDeclineAppointment"]);
   }
 
+  declineAppointment(appt)
+  {
+    this.db.collection('DeclinedAppointments').add(appt);
+    this.db.collection('Appointments').doc(appt.id).delete().then(function() {
+      console.log("Moved to declined");
+    }).catch(function(error){
+      console.log("Error declining appointment");
+    });
+
+    this.router.navigate(["acceptDeclineAppointment"]);
+  }  
 }

@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
 
   myArray = [];
   myArrayScheduled = [];
+  myArrayDeclined=[];
 
     another : any;
   dataSource : MatTableDataSource<any>;
@@ -31,14 +32,23 @@ export class DashboardComponent implements OnInit {
         this.myArray.push(doc);
         console.log(doc)
       });
-    })
+    });
 
     this.db.collection('ScheduledAppointments').valueChanges().subscribe(sdocs => {
       this.myArrayScheduled=[];
       sdocs.forEach(sdoc => {
         this.myArrayScheduled.push(sdoc);
       })
-    })
+    });
+
+    this.db.collection('DeclinedAppointments').valueChanges().subscribe(ddocs => {
+      this.myArrayDeclined=[];
+      ddocs.forEach(ddoc => {
+        this.myArrayDeclined.push(ddoc);
+      })
+    });
+
+
 
   }
 

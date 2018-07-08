@@ -1,23 +1,4 @@
-<!-- <p>
-  dashboard works!
-</p> -->
-
-
-
-<!-- <mat-table #table [dataSource]="dataSource">
-  <ng-container matColumnDef="beneficiary">
-    <mat-header-cell *matHeaderCellDef> Patient Name </mat-header-cell>
-    <mat-cell *matCellDef="let appointment"> {{appointment.beneficiary}} </mat-cell>
-  </ng-container>   
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-
-  <mat-row *matRowDef="let myRowData; columns: displayedColumns"></mat-row>
-
-</mat-table> -->
-
-
-<div style="margin: 2%;">
+<div style="margin: 10%;" >
   <div class="ui cards" *ngFor="let appointment of myArray">
 
     <div class="card">
@@ -28,8 +9,8 @@
         </div>
       </div>
       <div class="ui bottom attached button">
-        <i class="add icon"></i>
-        Add Friend
+        <i class="play"></i>
+        More Info
       </div>
     </div>
   </div>

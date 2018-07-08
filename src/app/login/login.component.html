@@ -1,0 +1,36 @@
+<!-- <mat-card>
+  <!- <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1> 
+
+  <div *ngIf="!(authService.user | async)">
+    <input matInput type="text" [(ngModel)]="email" placeholder="email">
+    <br>
+    <input matInput type="password" [(ngModel)]="password" placeholder="password">
+    <br>
+    <button mat-raised-button color="blue" (click)="login()" [disabled]="!email || !password">
+      Login
+    </button>
+    <!<button (click)="signup()" [disabled]="!email || !password">
+        Signup
+      </button>--
+
+
+  </div> -->
+
+<div *ngIf="!(authService.user | async)">
+  <form #Form="ngForm" name="loginform" class="ui form" style="margin-left: 10%; margin-right:10%;">
+    <div class="field">
+      <label>Email ID</label>
+      <input type="text" name="email" [(ngModel)]="email" placeholder="email">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="password" placeholder="password">
+    </div>
+    <button mat-raised-button color="blue" (click)="login()" [disabled]="!email || !password"> Login </button>
+  </form>
+</div>
+<button mat-raised-button color="blue" (click)="logout()" *ngIf="authService.user | async">
+  Logout
+</button>
+
+<!-- </mat-card> -->

@@ -6,6 +6,7 @@ import { RegisteremployeeComponent } from './registeremployee/registeremployee.c
 import { MakeAppointmentReceptionistComponent } from './make-appointment-receptionist/make-appointment-receptionist.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/accept-decline-appointment.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'acceptDeclineAppointment', component: AcceptDeclineAppointmentComponent
+  },
+  {
+    path: '', component: LoginComponent
   }
 ];
 

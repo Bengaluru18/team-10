@@ -25,7 +25,8 @@ import { MakeAppointmentReceptionistComponent } from './make-appointment-recepti
 // import { HeaderComponent } from './header/header.component';
 // import { PostListComponent } from './post-list/post-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/accept-decline-appointment.component'
+import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/accept-decline-appointment.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +35,14 @@ import { AcceptDeclineAppointmentComponent } from './accept-decline-appointment/
     RegisterPatientComponent,
     RegisteremployeeComponent,
     DashboardComponent,
+    LoginComponent,
 
     // MakeAppointmentComponent,
     MakeAppointmentReceptionistComponent,
 
-    AcceptDeclineAppointmentComponent
+    AcceptDeclineAppointmentComponent,
+
+    LoginComponent
   ],
   imports: [
    BrowserModule,
